@@ -7,7 +7,7 @@ class Solution(object):
         :type num: int
         :rtype: int
         """
-        binnum = list(bin(num)[2:]) # To get binary repesentation of num
+        binnum = bin(num)[2:] # To get binary repesentation of num
         complement = ""
         for bn in binnum:
             complement += str(1 - int(bn)) # Invert 0s and 1s
