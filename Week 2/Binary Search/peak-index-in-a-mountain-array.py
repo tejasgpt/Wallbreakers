@@ -3,7 +3,7 @@ class Solution(object):
         """
         PROBLEM STATEMENT:
         Given an array that is definitely a mountain, return any i 
-        such that A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1].
+        such that A[0] < A[1] <... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1].
         :type A: List[int]
         :rtype: int
         """
