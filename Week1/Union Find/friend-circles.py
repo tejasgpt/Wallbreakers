@@ -1,3 +1,15 @@
+class UniFind:
+    def __init__(self, N):
+        self.num = range(N)
+
+    def find(self, x):
+        if self.num[x] != x:
+            self.num[x] = self.find(self.num[x])
+        return self.num[x]
+
+    def union(self, x, y):
+        self.num[self.find(x)] = self.find(y)
+
 class Solution(object):
     def findCircleNum(self, M):
         """
@@ -17,15 +29,3 @@ class Solution(object):
                     direct.union(i,j)
         
         return sum([direct.find(x) == x for x in range(N)])
-    
-class UniFind:
-    def __init__(self, N):
-        self.num = range(N)
-
-    def find(self, x):
-        if self.num[x] != x:
-            self.num[x] = self.find(self.num[x])
-        return self.num[x]
-
-    def union(self, x, y):
-        self.num[self.find(x)] = self.find(y)
