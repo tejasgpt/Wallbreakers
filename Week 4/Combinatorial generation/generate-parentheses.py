@@ -8,12 +8,12 @@ class Solution(object):
         :type n: int
         :rtype: List[str]
         """
-        para = [['']]
+        paragraph = [['']]
         for num in range(1, n + 1):
             generate = []
             for i in range(num):
-                for j in para[i]:
-                    for k in para[num - i - 1]:
+                for j in paragraph[i]:
+                    for k in paragraph[num - i - 1]:
                         generate.append('(' + j + ')' + k)
-            para.append(generate)
-        return para[n]
+            paragraph.append(generate)
+        return paragraph[n]
