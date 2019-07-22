@@ -1,3 +1,28 @@
+# ALTERNATE SOLUTION USING HASH MAP
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        PROBLEM STATEMENT:
+        Given an array of integers, return indices of the two numbers 
+        such that they add up to a specific target.
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        if not nums:
+            return []
+        
+        maps = dict()
+        
+        for i in range(len(nums)):
+            if target-nums[i] in maps:
+                return maps[target-nums[i]], i
+            else:
+                maps[nums[i]] = i
+
+# ALTERNATE SOLUTION USING HASH SET
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
