@@ -1,4 +1,4 @@
-# ALTERNATE SOLUTION USING HASH MAP
+# OPTIMIZED SOLUTION USING HASH MAP
 
 class Solution(object):
     def twoSum(self, nums, target):
